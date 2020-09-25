@@ -30,11 +30,11 @@ GO111MODULE=on go install ./kubetest
 K8S_VERSION=$(kubectl version -o json | jq -r '.serverVersion.gitVersion')
 export KUBERNETES_CONFORMANCE_TEST=y
 export KUBECONFIG="$HOME/.kube/config"
-}
+
 
 
 kubetest --provider=skeleton --test --test_args=”--ginkgo.focus=\[Conformance\]” --extract ${K8S_VERSION} | tee test.out
-
+}
 ```
 
 
