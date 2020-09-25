@@ -6,6 +6,9 @@ In this lab you will deploy the [DNS add-on](https://kubernetes.io/docs/concepts
 
 Deploy the `coredns` cluster add-on:
 
+> :warning: **Warning:** rbac.authorization.k8s.io/v1beta1 ClusterRole is deprecated in v1.17+, unavailable in v1.22+; use rbac.authorization.k8s.io/v1 ClusterRole
+clusterrole.rbac.authorization.k8s.io/system:coredns unchanged
+**Warning:** rbac.authorization.k8s.io/v1beta1 ClusterRoleBinding is deprecated in v1.17+, unavailable in v1.22+; use rbac.authorization.k8s.io/v1 ClusterRoleBinding
 ```
 kubectl apply -f https://raw.githubusercontent.com/theJoakimHellberg/kubernetes-the-hard-way/master/deployments/coredns.yaml
 ```
